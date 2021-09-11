@@ -1,0 +1,78 @@
+<div class="main_1240">
+	<a href="/" class="logo_area">
+		<img src="assets/images/logo_top.svg" alt="臺灣生物多樣性資訊聯盟">
+	</a>
+
+	<div class="right_mbhambuger">
+		<div class="hmenu hmenu-2">
+			<span></span>
+		</div>
+	</div>
+
+	<!--手機選單-->
+	<div class="mb_bmenu">
+		<div class="ovh">
+			<ul>
+				<li>
+					<a href="#" class="one_set">
+						<p>會員登入</p>
+						<img class="arright" src="assets/images/next.svg" alt="會員登入">
+					</a>
+				</li>
+				<li>
+					<a href="/about.html" class="one_set">
+						<p>關於TBIA</p>
+						<img class="arright" src="assets/images/next.svg" alt="關於TBIA">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="right_menu">
+		<ul>
+			<li>
+				<a href="/about.html" class="big_title">關於TBIA</a>
+				<div class="line"></div>
+
+			</li>
+		</ul>
+	</div>
+	<div class="right_btn2">
+		<div class="member_login">
+			<div class="icon"></div>
+			<p>登入</p>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	$(function () {
+		$('.hmenu').on('click', function () {
+			$('.hmenu').toggleClass('active');
+			$('.mb_bmenu').slideToggle();
+		});
+	});
+
+
+	$('.rd_mb_two_menu_li').on('click', function (event) {
+
+		event.preventDefault();
+		if ($(this).closest('li').hasClass('now')) {
+
+			$('.rd_mb_two_menu_li').removeClass('now');
+
+			$('.rd_mb_two_menu_li').find('.mbmu2').slideUp();
+
+		} else {
+
+			$('.rd_mb_two_menu_li').removeClass('now');
+			$(this).addClass('now');
+
+			$('.rd_mb_two_menu').find('.mbmu2').slideUp();
+			$(this).closest('li').find('.mbmu2').slideDown();
+		}
+
+
+	});
+</script>
